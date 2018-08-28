@@ -68,12 +68,12 @@ var HomePage = /** @class */ (function () {
             _this.items = result;
         });
     };
-    HomePage.prototype.itemClick = function (itemid) {
-        alert(itemid);
+    HomePage.prototype.itemClick = function (itembody) {
+        alert(itembody);
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\lenovo\Desktop\is\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Crud\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n<ion-item *ngFor="let item of items"(click)="itemClick(item.id)">\n <h1>{{item.title}}</h1>\n\n</ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\lenovo\Desktop\is\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\lenovo\Documents\GitHub\ionic3-crud\is\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n    <b>  Beginning </b>\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list >\n<ion-item  *ngFor="let item of items"(click)="itemClick(item.body)">\n <h1>{{item.title}}</h1>\n\n</ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\lenovo\Documents\GitHub\ionic3-crud\is\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http___["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http___["a" /* HttpClient */]) === "function" && _b || Object])
     ], HomePage);
@@ -196,7 +196,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\lenovo\Desktop\is\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\Users\lenovo\Desktop\is\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\lenovo\Documents\GitHub\ionic3-crud\is\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\Users\lenovo\Documents\GitHub\ionic3-crud\is\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);

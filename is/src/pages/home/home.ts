@@ -19,7 +19,8 @@ loadData(){
    this.items= result;
  })
 }
-itemClick(itemid:number){
-  alert(itemid);
+itemClick(itembody:string){
+  alert(itembody);
+
 }
 }
