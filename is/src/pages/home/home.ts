@@ -1,26 +1,36 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import{HttpClient} from '@angular/common/http/';
-import {Observable} from 'rxjs/Observable';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HTTP } from '@ionic-native/http';
+
+
+@IonicPage()
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
 
-  public items:any;
-  constructor(public navCtrl: NavController, public http:HttpClient) {
-this.loadData();
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http:HTTP) {
+  this.loadData();
   }
+
+items:any;
 loadData(){
-  let data:Observable<any>;
-  data = this.http.get('https://jsonplaceholder.typicode.com/posts');
- data.subscribe(result =>{
-   this.items= result;
+
+  let headers = {"Content-Type": "application/x-www-form-urlencoded"};
+   this.http.get('https://jsonplaceholder.typicode.com/posts',{},headers).then(result =>{
+  console.log('RESULT',result);
+   this.items= JSON.parse(result['data']);
+ }).catch(err=>{
+   console.log('ERROR',err);
  })
 }
 itemClick(itembody:string){
   alert(itembody);
 
 }
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
+  }L
+
 }
