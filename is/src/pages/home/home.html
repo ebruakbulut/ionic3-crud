@@ -6,12 +6,13 @@
 <ion-content padding>
   <ion-list >
     <ion-toolbar position="bottom">
-  		<button ion-button full (click)="loadData()";>UPDATE</button>
+  		<button ion-button full (click)="loadData()">UPDATE</button>
   	</ion-toolbar>
+
 <ion-item  *ngFor="let item of items" (click)="itemClick(item.body)">
-
- <h1>{{item.id}}.  {{item.title}}</h1>
-
+ <p>{{item.id}}.  {{item.title}}</p>
+ <h1>  </h1>
+   <p><ion-icon name="list-box"></ion-icon></p>
 </ion-item>
   </ion-list>
 </ion-content>
