@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HTTP } from '@ionic-native/http';
-
+import {DataProvider} from '../../providers/data/data'
 
 @IonicPage()
 @Component({
@@ -10,7 +10,11 @@ import { HTTP } from '@ionic-native/http';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http:HTTP) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http:HTTP,
+              public datap: DataProvider) {
+  //  console.log('started');
+var datafromprovider=datap.datax;
+console.log(datafromprovider);
   this.loadData();
   }
 

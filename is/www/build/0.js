@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 274:
+/***/ 275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(276);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,14 +38,15 @@ var HomePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 275:
+/***/ 276:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_http__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_http__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_data_data__ = __webpack_require__(198);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,11 +59,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl, navParams, http) {
+    function HomePage(navCtrl, navParams, http, datap) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.http = http;
+        this.datap = datap;
+        //  console.log('started');
+        var datafromprovider = datap.datax;
+        console.log(datafromprovider);
         this.loadData();
     }
     HomePage.prototype.loadData = function () {
@@ -83,9 +89,10 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\lenovo\Documents\GitHub\ionic3-crud\is\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>My App </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-list >\n    <ion-toolbar position="bottom">\n  		<button ion-button full (click)="loadData()">UPDATE</button>\n  	</ion-toolbar>\n\n<ion-item  *ngFor="let item of items" (click)="itemClick(item.body)">\n <p>{{item.id}}.  {{item.title[1,2,3,4,5,6]}}</p>\n <h1>  </h1>\n   <p><ion-icon name="list-box"></ion-icon></p>\n</ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\lenovo\Documents\GitHub\ionic3-crud\is\src\pages\home\home.html"*/,
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\lenovo\Documents\GitHub\ionic3-crud\is\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>My App </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-list >\n    <ion-toolbar position="bottom">\n  		<button ion-button full (click)="loadData()"> UPDATE </button>\n  	</ion-toolbar>\n\n<ion-item  *ngFor="let item of items" (click)="itemClick(item.body)">\n <p>{{item.id}}.  {{item.title}}</p>\n <h1>  </h1>\n   <p><ion-icon name="list-box"></ion-icon></p>\n</ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\lenovo\Documents\GitHub\ionic3-crud\is\src\pages\home\home.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_http__["a" /* HTTP */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_http__["a" /* HTTP */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_data_data__["a" /* DataProvider */]])
     ], HomePage);
     return HomePage;
 }());
